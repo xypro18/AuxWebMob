@@ -19,9 +19,6 @@
                     <p:outputLabel for="username" value="#{msg.username}:" />
                     <p:inputText id="username" value="#{profile.emp.username}" required="true" />
                     <p:message for="username" display="text"/>
-                    <p:outputLabel for="password" value="#{msg.password}:" />
-                    <p:password id="password" value="#{profile.emp.password}" required="true" />
-                    <p:message for="password" display="text"/>
                     <p:outputLabel for="sex" value="#{msg.sex}:" />
                     <p:selectOneRadio id="sex" value="#{profile.emp.sex}" required="true" >
                         <f:selectItem itemLabel="#{msg.male}" itemValue="M" />
@@ -40,8 +37,6 @@
                 </h:panelGrid>
                 <br/>
                 <p:commandButton value="#{msg.save}" action="#{profile.save}" update="grid" />
-                <p:spacer width="20" />
-                <p:commandButton value="#{msg.reset}" type="reset" />
                 <p:spacer width="20" />
                 <p:commandButton value="#{msg.cancel}" immediate="true" action="login" />
             </h:form>
